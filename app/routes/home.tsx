@@ -4,7 +4,7 @@ import { Welcome } from "../welcome/welcome";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Quiz App" },
-    { name: "description", content: "Quiz App to pratic state manage using react!" },
+    { name: "description", content: "Quiz App to practice state management using React!" },
   ];
 }
 
