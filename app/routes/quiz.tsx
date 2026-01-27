@@ -13,20 +13,6 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function QuizRoute() {
-  const {
-    currentQuestion,
-    setSelectedAnswer,
-    isAnswerCorrect,
-    changeQuestion,
-    selectedAnswer
-  } = QuizData();
-  return (
-    <QuizPage
-      currentQuestion={currentQuestion}
-      setSelectedAnswer={setSelectedAnswer}
-      isAnswerCorrect={isAnswerCorrect}
-      changeQuestion={changeQuestion}
-      selectedAnswer={selectedAnswer}
-    />
-  );
+  const quizData = QuizData();
+  return <QuizPage {...quizData} />;
 }
