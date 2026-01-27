@@ -4,7 +4,7 @@ export function Welcome() {
   return (
     <main className="flex flex-col h-full w-full justify-evenly items-center p-8 bg-gray-100">
       <section>
-        <Link to={"#"}>
+        <Link to="/quiz">
           <button className="border p-3 border-green-600 bg-green-600 text-white rounded-lg w-sm text-lg font-semibold cursor-pointer hover:bg-green-700 hover:border-green-700">
             Start
           </button>
