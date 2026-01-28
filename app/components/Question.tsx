@@ -18,7 +18,7 @@ export const Question: React.FC<IQuestionParams> = ({ selectedAnswer, currentQue
     }
   };
   return (
-    <>
+    <div className="m-h-1 bg-gray-50 p-4">
       <h1 className="text-2xl font-bold mb-6">{currentQuestion?.question}</h1>
       <p className="py-4">Value: {currentQuestion?.points} points</p>
       <ul className="space-y-4">
@@ -41,6 +41,6 @@ export const Question: React.FC<IQuestionParams> = ({ selectedAnswer, currentQue
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
