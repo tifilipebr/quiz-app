@@ -15,11 +15,6 @@ export function Welcome() {
           This quiz is to test your knowledge about React Framework.
         </p>
         <p>
-          {" "}
-          It will cover the basic concepts of React Framework and how to build a
-          simple app using React.
-        </p>
-        <p>
           When you press the start button, you will be redirected to the quiz
           page.
         </p>

@@ -38,6 +38,51 @@ export const QuizData = (): IQuizData => {
       answer: "Mars",
       points: 15,
     },
+    {
+      id: 3,
+      question: "What is the largest ocean on Earth?",
+      options: [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean",
+        "Pacific Ocean",
+      ],
+      answer: "Pacific Ocean",
+      points: 10,
+    },
+    {
+      id: 4,
+      question: "Which element has the chemical symbol 'O'?",
+      options: ["Gold", "Oxygen", "Osmium", "Silver"],
+      answer: "Oxygen",
+      points: 5,
+    },
+    {
+      id: 5,
+      question: "Who painted the Mona Lisa?",
+      options: [
+        "Vincent van Gogh",
+        "Pablo Picasso",
+        "Leonardo da Vinci",
+        "Claude Monet",
+      ],
+      answer: "Leonardo da Vinci",
+      points: 20,
+    },
+    {
+      id: 6,
+      question: "What is the main language spoken in Brazil?",
+      options: ["Spanish", "English", "Portuguese", "French"],
+      answer: "Portuguese",
+      points: 5,
+    },
+    {
+      id: 7,
+      question: "Which company developed the iPhone?",
+      options: ["Samsung", "Microsoft", "Google", "Apple"],
+      answer: "Apple",
+      points: 10,
+    },
   ];
   const [answers, setAnswers] = useState<IAnswer[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

@@ -12,12 +12,17 @@ export function QuizPage({
   getQuestionById,
 }: IQuizData) {
   return (
-    <main className="flex flex-col h-full w-full justify-center items-center p-8 bg-gray-100">
-      <nav>
+    <main className="flex flex-col h-full w-full justify-center items-center p-8 bg-gray-100 min-h-fit">
+      <nav className="flex flex-col justify-center items-center py-5 bg-lime-300 w-lg rounded-md gap-y-4">
         {finished ? (
-          <h1>Quiz Finished! Score: {currentScore}</h1>
+          <>
+          <h1 className="text-xl font-semibold">Quiz Finished!</h1>
+          <span className="border rounded-lg border-lime-500 bg-lime-500 p-6 text-lg text-white font-semibold">
+            Score: {currentScore} points
+          </span>
+          </>
         ) : (
-          <span>Current Score: {currentScore}</span>
+          <span>Current Score: {currentScore} points</span>
         )}
       </nav>
       <QuizContent>
@@ -29,7 +34,9 @@ export function QuizPage({
           />
         ) : !finished ? (
           <h1>No questions</h1>
-        ) : null}
+        ) : (
+          <h1 className="text-xl font-semibold">Questions</h1>
+        )}
         {finished
           ? answers.map((userAnswer) => {
               try {
