@@ -1,0 +1,156 @@
+# Guia de Desenvolvimento do Quiz App
+
+## Visão Geral
+
+Este projeto é um quiz feito para praticar desenvolvimento assistido com IA e uma aplicação para fazer avaliação de aprendizagem cumprindo regras de negócio.
+
+## Estrutura de Documentação
+
+A pasta `/docs` contém arquivos de documentação essenciais:
+
+- **motivation.md** - Motivação para o projeto e aprendizados
+- **status.md** - Status atual do projeto e progresso
+- **arquitetura.md** - Arquitetura proposta e decisões de design
+- **testes.md** - Cenários de teste e estratégia de testes
+
+## Princípios de Desenvolvimento
+
+### 1. Desenvolvimento Assistido por IA
+
+**Objetivo**: Utilizar IA como assistente de desenvolvimento, não como substituto.
+
+**Diretrizes**:
+- Use IA para acelerar implementação, mas mantenha o controle da arquitetura
+- Sempre revise e entenda o código gerado pela IA
+- Use IA para tarefas repetitivas e boilerplate
+- Mantenha a responsabilidade pelas decisões técnicas
+
+### 2. Arquitetura e Design
+
+**Padrões Adotados**:
+- Container-Presenter Pattern para separação de lógica e UI
+- Design Atômico para organização de componentes
+- Hooks personalizados para lógica de negócio
+- TypeScript para tipagem estática
+
+**Estrutura de Componentes**:
+```
+components/
+├── atoms/          # Componentes básicos (Button, Text, Input)
+├── molecules/      # Componentes compostos simples (AnswerButton, QuestionCard)
+└── organisms/      # Componentes complexos (QuestionSection, ResultsSection)
+```
+
+### 3. Qualidade de Código
+
+**Requisitos**:
+- Sempre tire dúvidas antes de implementar
+- Consulte as skills disponíveis antes de implementar algo
+- Faça desenvolvimento orientado a testes (TDD)
+- Sempre adicione comentários nas abstrações
+- Mantenha a documentação atualizada
+
+### 4. Processo de Desenvolvimento
+
+**Workflow**:
+1. **Planejamento**: Definir arquitetura e requisitos
+2. **Documentação**: Atualizar docs relevantes
+3. **Implementação**: Código com revisão e testes
+4. **Validação**: Testes e revisão de código
+5. **Entrega**: Atualização de documentação e status
+
+## Requisitos Técnicos
+
+### Stack Tecnológica
+- **Frontend**: React 19 + TypeScript
+- **Bundler**: Vite 6
+- **Roteamento**: React Router 7
+- **Estilização**: TailwindCSS
+- **Testes**: Jest + React Testing Library
+
+### Padrões de Código
+- TypeScript strict mode
+- ESLint com regras de qualidade
+- Prettier para formatação consistente
+- Git hooks para validação
+
+## Estratégia de Testes
+
+### Cobertura Mínima
+- 80% de cobertura de linhas
+- 70% de cobertura de branches
+- Testes unitários para lógica de negócio
+- Testes de integração para fluxos críticos
+
+### Estratégia TDD
+1. Escrever testes antes da implementação
+2. Implementar para passar os testes
+3. Refatorar mantendo testes verdes
+4. Iterar para novas funcionalidades
+
+## Gestão de Projeto
+
+### Issues e PRs
+- Sempre documentar decisões em issues
+- PRs devem incluir descrição clara e testes
+- Revisão de código obrigatória
+- Atualizar documentação após merge
+
+### Versionamento
+- Git flow para gerenciamento de branches
+- Commits descritivos e semânticos
+- Tags para releases importantes
+
+## Melhorias Recomendadas
+
+### 1. Estrutura de Arquivos
+- Organizar hooks em subpastas por funcionalidade
+- Criar pasta `services` para lógica externa
+- Separar estilos em arquivos específicos
+
+### 2. Documentação
+- Adicionar diagramas de arquitetura
+- Documentar fluxos de dados
+- Criar guia de contribuição
+- Adicionar exemplos de uso
+
+### 3. Qualidade
+- Configurar linting automatizado
+- Adicionar testes de integração
+- Implementar CI/CD básico
+- Monitorar performance
+
+### 4. Segurança
+- Validar entradas de dados
+- Sanitizar saídas
+- Configurar CORS adequado
+- Tratar erros de forma segura
+
+## Checklist de Implementação
+
+Antes de implementar novas funcionalidades:
+
+- [ ] Atualizar documentação de arquitetura
+- [ ] Definir testes necessários
+- [ ] Planejar impacto na arquitetura
+- [ ] Consultar skills disponíveis
+- [ ] Validar requisitos de negócio
+- [ ] Considerar performance e segurança
+
+## Comunicação
+
+### Comentários de Código
+- Explique o "porquê", não o "o quê"
+- Documente decisões complexas
+- Indique áreas que podem ser melhoradas
+- Use padrões consistentes
+
+### Documentação
+- Mantenha a documentação sincronizada com o código
+- Use exemplos práticos
+- Documente mudanças significativas
+- Revise documentação periodicamente
+
+## Conclusão
+
+Este guia deve ser consultado e atualizado continuamente. O objetivo é manter um equilíbrio entre produtividade (com IA) e qualidade (com boas práticas). Qualquer dúvida ou sugestão de melhoria, abra um issue para discussão.
