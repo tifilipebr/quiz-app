@@ -1,7 +1,9 @@
 import type { Config } from "@react-router/dev/config";
 
+const basePath = process.env.VITE_BASE_PATH ?? "";
+
 export default {
-  basename: process.env.VITE_BASE_PATH ?? "/",
+  basename: basePath || "/",
   ssr: false,
   future: {
     v8_middleware: true,
