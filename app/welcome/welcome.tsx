@@ -11,16 +11,10 @@ export function Welcome() {
         </Link>
       </section>
       <section className="max-w-md">
-        <p className="text-base">
-          This quiz is to test your knowledge about React Framework.
-        </p>
+        <p className="text-base">This quiz is to test your knowledge about React Framework.</p>
+        <p>When you press the start button, you will be redirected to the quiz page.</p>
         <p>
-          When you press the start button, you will be redirected to the quiz
-          page.
-        </p>
-        <p>
-          And then you can answer the questions. At the end of the quiz, you
-          will get your score.
+          And then you can answer the questions. At the end of the quiz, you will get your score.
         </p>
       </section>
     </main>
