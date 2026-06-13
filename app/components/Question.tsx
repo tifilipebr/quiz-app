@@ -1,15 +1,23 @@
 import type React from "react";
 import type { IQuestion } from "~/hooks/QuizData";
 
-type IQuestionParams = {
-    selectedAnswer: string|undefined;
-    currentQuestion: IQuestion|null|undefined;
-    setSelectedAnswer: React.Dispatch<React.SetStateAction<string>> | undefined
+interface IQuestionParams {
+  selectedAnswer: string | undefined;
+  currentQuestion: IQuestion | null | undefined;
+  setSelectedAnswer: React.Dispatch<React.SetStateAction<string>> | undefined;
 }
 
-export const Question: React.FC<IQuestionParams> = ({ selectedAnswer, currentQuestion,setSelectedAnswer }) => {
+export const Question: React.FC<IQuestionParams> = ({
+  selectedAnswer,
+  currentQuestion,
+  setSelectedAnswer,
+}) => {
   const getButtonBorder = (option: string) => {
-    if (selectedAnswer && option === currentQuestion?.answer) {
+    if (
+      selectedAnswer !== undefined &&
+      selectedAnswer !== "" &&
+      option === currentQuestion?.answer
+    ) {
       return "border-green-600";
     } else if (selectedAnswer === option) {
       return "border-red-600";
@@ -30,7 +38,7 @@ export const Question: React.FC<IQuestionParams> = ({ selectedAnswer, currentQue
             }
             onClick={(event) => {
               event.preventDefault();
-              if (selectedAnswer) {
+              if (selectedAnswer !== undefined && selectedAnswer !== "") {
                 return;
               }
               setSelectedAnswer!(option);

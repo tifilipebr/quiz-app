@@ -1,6 +1,7 @@
 import { QuizData } from "~/hooks/QuizData";
-import type { Route } from "./+types/home";
 import { QuizPage } from "~/quiz/quiz";
+
+import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
   return [
